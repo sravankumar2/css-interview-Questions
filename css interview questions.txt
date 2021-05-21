@@ -1,0 +1,292 @@
+Q1. What are the different ways you could integrate CSS into your HTML page?
+ There are three ways that you could integrate a certain CSS style:
+
+  1.You can integrate your style using the style-tags in the head section of your HTML page.
+  2.You can integrate your style using inline-styling.
+  3.You can write your CSS in a separate file and add it to your HTML page using the link tag.
+
+Q2. What are the ways to assign a certain colour to an element in CSS?
+ CSS can assign a wide range of colours to elements using different notations. There are three notations as of now  that are used that are explained below:
+
+  Hexadecimal notation:
+     A colour in hexadecimal string notation always begins with the character “#”. After that, the hexadecimal digits     of the colour code is written. The string is case-insensitive.
+  RGB functional notation:
+     RGB (Red/Green/Blue) functional notation, like hexadecimal string notation, represents colours using their red,      green, and blue components (as well as, optionally, an alpha channel component for opacity). However, instead of     using a string, the colour is defined using the CSS function RGB(). This function accepts as its input parameters     the values of the red, green, and blue components and an optional fourth parameter, the value for the alpha        channel.
+  HSL functional notation:
+     Designers and artists often prefer to work using the HSL (Hue/Saturation/Luminosity) colour method. On the web,      HSL colours are represented using HSL functional notation. The HSL() CSS function is very similar to the RGB()     function in usage otherwise
+
+Q3. Explain the CSS Box Model and its different elements.
+   The CSS box model describes the rectangular boxes that are generated for elements in the document tree and laid    out   according to the visual formatting model. Each box has a content area (e.g. text, an image, etc.) and an    optional surrounding padding, border, and margin areas.
+
+ The CSS box model is responsible for calculating:
+
+  1.How much space a block element takes up.
+  2.Whether or not borders and/or margins overlap, or collapse.
+  3.A box’s dimensions. 
+
+ The box model has the following rules: 
+  1.The dimensions of a block element are calculated by width, height, padding, borders, and margin.
+  2.If no height is specified, a block element will be as high as the content it contains, plus padding.
+  3.If no width is specified, a non-floated block element will expand to fit the width of its parent minus padding.
+  4.The height of an element is calculated by the content’s height.
+  5.The width of an element is calculated by the content’s width.
+  6.By default, padding and border are not part of the width and height of an element.
+
+Q4. What is the z-index in CSS? 
+ The z-index helps specify the stack order of positioned elements that may overlap one another. The z-index default value is zero and can take on either a positive or negative number.
+
+ An element with a higher z-index is always stacked above than a lower index.
+
+ Z-Index can take the following values:
+  1.Auto: Sets the stack order equal to its parents.
+  2.Number: Orders the stack order.
+  3.Initial: Sets this property to its default value (0).
+  4.Inherit: Inherits this property from its parent element.
+
+Q5. What are CSS Sprites? 
+ CSS sprites combine multiple images into one single larger image. It is a commonly-used technique for icons (Gmail   uses it). This is how you could implement it:
+
+  1.Use a sprite generator that packs multiple images into one and generates the appropriate CSS for it.
+  2.Each image would have a corresponding CSS class with background-image, background-position and background-size     properties defined.
+  3.To use that image, add the corresponding class to your element.
+
+Q6. What are pseudo-elements in CSS?
+ A CSS pseudo-element is a keyword added to a selector that lets you style a specific part of the selected element (s). They can be used for decoration (:first-line, :first-letter) or adding elements to the markup (combined with  content: ...) without having to modify the markup (:before, :after).
+
+  1.:first-line and :first-letter can be used to decorate text.
+  2.Triangular arrows in tooltips use :before and :after. This encourages separation of concerns because the triangle     is considered a part of styling and not really the DOM. It’s not really possible to draw a triangle with just CSS      styles without using an additional HTML element.
+
+Q7. How will you target an h2 and h3 with the same styling?
+
+  You can target multiple elements by separating the separators with a comma (,)
+
+   h2, h3 {
+    color: blue;
+   }
+
+Q8. What is the float property used for in CSS?
+ The float CSS property places an element on the left or right side of its container, allowing text and inline   elements to wrap around it. The element is removed from the normal flow of the page, though it still remains a part   of the flow (in contrast to absolute positioning). Below is the usage of float
+
+  float: none;
+
+  float: left;
+
+  float: right;
+
+Q9.  What are the different modules used in the current version of CSS?
+ There are several modules in CSS. Below are a few of them:
+  1.Selectors
+  2.Box Model
+  3.Backgrounds and Borders
+  4.Text Effects
+  5.2D/3D Transformations
+  6.Animations
+  7.Multiple Column Layout
+  8.User Interface
+
+Q10. What are the different media types allowed by CSS?
+ There are four types of @media properties (including screen):
+
+  all – for all media type devices
+  print – for printers
+  speech – for screenreaders that “reads” the page out loud
+  screen – for computer screens, tablets, smart-phones etc.
+  Here is an example of print-media type’s usage:
+
+  @media print {
+   h1 {
+        background-color: yellow;
+      }
+   }
+Q11. What is the overflow property in CSS used for?
+ The overflow property specifies what should happen if content overflows an element’s box. This property specifies   whether to clip content or to add scrollbars when an element’s content is too big to fit in a specified area. Below   are the overflow options available in CSS – 
+
+   overflow: auto;
+
+   overflow: none;
+
+   overflow: scroll;
+
+   overflow: visible;
+
+Q12. What is the property that is used for controlling image-scroll?
+ The background-attachment property sets whether a background image scrolls with the rest of the page, or is fixed.   Here is an example of a background-image that will not scroll with the page (fixed):
+  
+ body {
+  background-image: url("img_tree.gif");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+ }
+
+Q13. What is responsive web design?
+ Responsive design is an approach to web page creation that makes use of flexible layouts, flexible images and   cascading style sheet media queries. The goal of responsive design is to build web pages that detect the visitor’s    screen size and orientation and change the layout accordingly.
+
+Q14. What is the difference between {visibility: hidden} and {display: none}? 
+  
+  display:none means that the tag in question will not appear on the page at all (although you can still interact   with it through the DOM). There will be no space allocated for it between the other tags.
+
+  visibility:hidden means that unlike display:none, the tag is not visible, but space is allocated for it on the   page. The tag is rendered, it just isn’t seen on the page.
+
+  For example:
+  test | <span style="[style-tag-value]">Appropriate style in this tag</span> | test
+  Replacing [style-tag-value] with display:none results in:
+
+     test |   | test
+    Replacing [style-tag-value] with visibility:hidden results in:
+
+    test |                        | test
+
+Q15. Explain the concept of specificity in CSS.
+  Specificity is the means by which browsers decide which CSS property values are the most relevant to an element   and, therefore, will be applied. Specificity is based on the matching rules which are composed of different sorts   of CSS selectors.
+
+  Specificity is a weight that is applied to a given CSS declaration, determined by the number of each selector type   in the matching selector. When multiple declarations have equal specificity, the last declaration found in the CSS is applied to the element. Specificity only applies when the same element is targeted by multiple declarations. As per CSS rules, directly targeted elements will always take precedence over rules which an element inherits from its ancestor.
+
+Q16. What is CSS flexbox?
+ The flexbox layout officially called CSS flexible box layout module is a new layout module in CSS3. It is made to improve the items align, directions and order in the container even when they are with dynamic, or even unknown size. The prime characteristic of the flex container is the ability to modify the width or height of its children to fill the available space in the best possible way on different screen sizes.
+
+Q17. Explain the scenario you would use translate() instead of absolute positioning? 
+ Translate is a value of CSS transform. Changing transform or opacity does not trigger browser reflow or repaint but does trigger compositions; whereas changing the absolute positioning triggers reflow. Transform causes the browser to create a GPU layer for the element but changing absolute positioning properties uses the CPU. Hence translate() is more efficient and will result in shorter paint times for smoother animations.
+
+  When using translate(), the element still occupies its original space (sort of like position: relative), unlike in changing the absolute positioning.
+
+Q18. Explain the difference in approach when designing a responsive website over a mobile-first strategy?
+ These two approaches are not exclusive. Making a website responsive means some elements will respond by adapting its size or other functionality according to the device’s screen size, typically the viewport width, through CSS media queries.
+
+  For example, making the font size smaller on smaller devices.
+
+  @media (min-width: 601px) {
+   .my-class { 
+       font-size: 24px;
+   }
+  }
+
+  @media (max-width: 600px) {
+  .my-class {
+     font-size: 12px;
+   }
+  }
+   A mobile-first strategy is also responsive, however, it agrees we should default and define all the styles for mobile devices, and only add specific responsive rules to other devices later. Following the previous example:
+
+     .my-class {
+        font-size: 12px;
+     }
+
+     @media (min-width: 600px) {
+    .my-class {
+        font-size: 24px;
+      }
+    }
+    A mobile-first strategy has 2 main advantages:
+    -It’s more performant on mobile devices since all the rules applied for them don’t have to be validated against any media queries
+    -It forces to write cleaner code in respect to responsive CSS rules.
+
+Q19. What are the different ways to position a certain element in CSS?
+ The position property specifies the type of positioning method used for an element.
+
+   There are five different position values:
+
+	position: fixed;
+
+	position: static;
+
+	position: absolute;
+
+	position: sticky;
+
+	position: relative;
+
+    Elements are then positioned using the top, bottom, left, and right properties. However, these properties will not work unless the position property is set first. They also work differently depending on the position value.
+
+Q20. What effect would this piece of CSS code have? {box-sizing: border-box;}
+   By default, elements have box-sizing: content-box applied, and only the content size is being accounted for.
+   box-sizing: border-box changes how the width and height of elements are being calculated, border and padding are also being included in the calculation.
+  The height of an element is now calculated by the content’s height + vertical padding + vertical border width.
+  The width of an element is now calculated by the content’s width + horizontal padding + horizontal border width.
+  Taking into account paddings and borders as part of our box model resonates better with how designers actually imagine content in grids.
+
+Q21. What are Vendor-Prefixes? 
+  Browser vendors sometimes add prefixes to experimental or nonstandard CSS properties and JavaScript APIs, so developers can experiment with new ideas while—in theory—preventing their experiments from being relied upon and then breaking web developers’ code during the standardization process. Developers should wait to include the unprefixed property until browser behaviour is standardized.
+
+  The major browsers use the following prefixes:
+
+  -webkit- (Chrome, Safari, newer versions of Opera, almost all iOS browsers (including Firefox for iOS); basically, any WebKit based browser)
+  -moz- (Firefox)
+  -o- (Old, pre-WebKit, versions of Opera)
+  -ms- (Internet Explorer and Microsoft Edge)
+Q22. Why is @import only at the top?
+
+   @import is preferred only at the top, to avoid any overriding rules. Generally, ranking order is followed in most programming languages such as Java, Modula, etc. In C, the # is a prominent example of a @import being at the top.
+
+Q23. What is contextual selector?
+
+  Selector used to select special occurrences of an element is called contextual selector. A space separates the individual selectors. Only the last element of the pattern is addressed in this kind of selector. For e.g.: TD P TEXT {color: blue}
+
+Q24.What is a CSS pseudo-class?
+ It is a class that is used to define a special state of an HTML element.
+
+ This class can be used by styling an element when a user snooped over it and also it can style an HTML element when it gets the focus.
+
+   selector:pseudo-class {
+     property:value;
+    }
+Q25.Explain the concept of pseudo-elements in CSS.
+  It is a feature of CSS which is used to style the given parts of an element.
+
+   For Example, we can style the first letter or line of an HTML element.
+
+     selector::pseudo-element {
+       property:value;
+      }
+
+Q26.What is CSS opacity?
+  It is the property that elaborates on the transparency of an element.
+
+   By this property, we can transparent the image that can take the values from 0.0-1.0. If the value is lower, then the image is more transparent. IE8 and earlier versions of the browser can take the values from 0-100.
+
+    img {
+      opacity: 0.6;
+      filter: alpha(opacity=60); /* For IE8 and earlier */  
+     }
+Q27.Define ‘important’ declarations used in CSS.
+  Important declarations are defined as that declaration which is having more importance than the normal declaration.
+
+  While executing, these declarations override the declaration which is having less importance.
+
+  For example, if there are two users having an important declaration then one of the declarations will override the declaration of another user.
+
+  For Example:
+    Body {background: #FF00FF !important; color: blue}
+
+    In this body, background has more weight than the color.
+
+Q28. How is the concept of inheritance applied in CSS?
+
+  Inheritance is a concept in which the child class will inherit the properties of its parent class. It is a concept which is been used in many languages and is the easy way of defining the same property again.
+
+  It is used in CSS to define the hierarchy from the top level to the bottom level. Inherited properties can be overridden by the children’s class if the child uses the same name.
+
+   Example:
+
+     Body {font-size: 15pt;}
+
+    And another definition is being defined in the child class
+
+      Body {font-size: 15pt;}
+      H1 {font-size: 18pt;}
+
+    All the paragraph text will be displayed using the property and will be defined in the body except for the H1 style which will show the text in font 18 only.
+
+Q29. How can we add icons to the web page?
+
+  We can add icons to the HTML webpage by using an icon library like font-awesome.
+
+   We have to add the name of the given icon class to any inline HTML element. (<i> or <span>) . Icons in the icon libraries are scalable vectors that can be customized with CSS.
+
+Q30. What are gradients in CSS?
+
+  It is a property of CSS which allows you to display a smooth transformation between two or more than two specified colors.
+
+  There are two types of gradients that are present in CSS. They are:
+
+    Linear Gradient
+    Radial Gradient
